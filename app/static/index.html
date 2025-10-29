@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>FastAPI Calculator</h1>
+        <p class="subtitle">SOLID Design Principles | IS218 Midterm</p>
+
+        <div class="calculator">
+            <form id="calculatorForm">
+                <div class="form-group">
+                    <label for="input-x">First Number (x):</label>
+                    <input 
+                        type="number" 
+                        id="input-x" 
+                        name="x" 
+                        step="any" 
+                        required 
+                        placeholder="Enter first number"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="input-y">Second Number (y):</label>
+                    <input 
+                        type="number" 
+                        id="input-y" 
+                        name="y" 
+                        step="any" 
+                        required 
+                        placeholder="Enter second number"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="operation-select">Operation:</label>
+                    <select id="operation-select" name="operation" required>
+                        <option value="">Select operation</option>
+                        <option value="add">Addition (+)</option>
+                        <option value="subtract">Subtraction (−)</option>
+                        <option value="multiply">Multiplication (×)</option>
+                        <option value="divide">Division (÷)</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="calculate-button" class="btn-calculate">
+                    Calculate
+                </button>
+            </form>
+
+            <div id="result-container" class="result-container hidden">
+                <h2>Result:</h2>
+                <div id="result-display" class="result-display"></div>
+            </div>
+
+            <div id="error-container" class="error-container hidden">
+                <h2>Error:</h2>
+                <div id="error-display" class="error-display"></div>
+            </div>
+
+            <div class="loading hidden" id="loading">
+                <div class="spinner"></div>
+                <p>Calculating...</p>
+            </div>
+        </div>
+
+        <div class="info">
+            <p>Built with FastAPI | Strategy Pattern | TDD</p>
+            <a href="/docs" target="_blank">View API Documentation</a>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
