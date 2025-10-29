@@ -75,7 +75,7 @@ jobs:
 
       - name: Run E2E tests
         run: |
-          poetry run pytest tests/e2e/ -v --headed=false --video=retain-on-failure
+          poetry run pytest tests/e2e/ -v --video=retain-on-failure
 
       - name: Stop server
         if: always()
