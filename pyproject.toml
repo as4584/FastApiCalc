@@ -4,6 +4,7 @@ version = "1.0.0"
 description = "FastAPI Calculator with SOLID design principles - IS218 Midterm"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
+packages = [{include = "app"}, {include = "domain"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
